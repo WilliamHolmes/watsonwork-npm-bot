@@ -29,16 +29,16 @@ app.on('message-created', (message, annotation) => {
     _.each(content.match(constants.regex.NPM), p => {
         const packageName = strings.chompLeft(p, constants.regex.KEY);
         packages.getAnnotation(packageName).then(data => {
-            // app.sendMessage(spaceId, data);
-            const URL = strings.substitue(constants.urls.NPM, [packageName]);
-            const filePath = `./${constants.TEMP_DIR}/npm_${packageName}.png`;
-            webshot(URL, filePath, err => {
-                app.sendMessage(spaceId, data);
-                if (_.isEmpty(err)) {
-                    app.sendFile(spaceId,filePath);
-                    del.sync(filePath, { force: true });
-                }
-            });
+            app.sendMessage(spaceId, data);
+            // const URL = strings.substitue(constants.urls.NPM, [packageName]);
+            // const filePath = `./${constants.TEMP_DIR}/npm_${packageName}.png`;
+            // webshot(URL, filePath, err => {
+            //     app.sendMessage(spaceId, data);
+            //     if (_.isEmpty(err)) {
+            //         app.sendFile(spaceId,filePath);
+            //         del.sync(filePath, { force: true });
+            //     }
+            // });
         });
     });
 });
