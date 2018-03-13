@@ -30,15 +30,15 @@ app.on('message-created', (message, annotation) => {
         const packageName = strings.chompLeft(p, constants.regex.KEY);
         packages.getAnnotation(packageName).then(data => {
             app.sendMessage(spaceId, data);
-            // const URL = strings.substitue(constants.urls.NPM, [packageName]);
-            // const filePath = `./${constants.TEMP_DIR}/npm_${packageName}.png`;
-            // webshot(URL, filePath, err => {
-            //     app.sendMessage(spaceId, data);
-            //     if (_.isEmpty(err)) {
-            //         app.sendFile(spaceId,filePath);
-            //         del.sync(filePath, { force: true });
-            //     }
-            // });
+            const URL = strings.substitue(constants.urls.NPM, [packageName]);
+            const filePath = `./${constants.TEMP_DIR}/npm_${packageName}.png`;
+            webshot(URL, filePath, err => {
+                app.sendMessage(spaceId, data);
+                if (_.isEmpty(err)) {
+                    app.sendFile(spaceId,filePath);
+                    del.sync(filePath, { force: true });
+                }
+            });
         });
     });
 });
