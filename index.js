@@ -31,7 +31,7 @@ app.on('message-created', (message, annotation) => {
         packages.getAnnotation(packageName).then(data => {
             app.sendMessage(spaceId, data);
             // const URL = strings.substitue(constants.urls.NPM, [packageName]);
-            // const filePath = `./webshots/npm_${packageName}.png`;
+            // const filePath = `./${constants.TEMP_DIR}/npm_${packageName}.png`;
             // webshot(URL, filePath, err => {
             //     app.sendMessage(spaceId, data);
             //     if (_.isEmpty(err)) {

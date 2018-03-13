@@ -23,7 +23,8 @@ const constants = {
     urls: {
         LICENSE: 'http://spdx.org/licenses/{{0}}.html',
         NPM: 'https://www.npmjs.com/package/{{0}}'
-    }
+    },
+    TEMP_DIR: './temp_files'
 }
 
 module.exports = constants;
