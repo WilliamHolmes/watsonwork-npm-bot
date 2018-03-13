@@ -2,8 +2,8 @@
 applications:
 - instances: 1
   timeout: 180
-  name: watsonwork-npm-bot
+  name: watsonwork-npm-bot-20180313150327064-becoming-ferreter
   buildpack: sdk-for-nodejs
   command: npm start
   memory: 256M
-  random-route: true
+  random-route: false
