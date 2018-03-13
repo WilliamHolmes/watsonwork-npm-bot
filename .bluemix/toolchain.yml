@@ -46,7 +46,7 @@ deploy:
     $ref: deploy.json
   service-category: pipeline
   parameters:
-    app-name: 'watsonwork-npm-bot-{{timestamp}}'
+    app-name: 'watsonwork-npm-bot'
     dev-space: "{{space}}"
     dev-organization: "{{organization}}"
     dev-region: "{{region}}"
