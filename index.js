@@ -27,7 +27,7 @@ app.authenticate().then(() => app.uploadPhoto('./appicon.jpg'));
 app.on('message-created', (message, annotation) => {
     const { content = '', spaceId } = message;
     _.each(content.match(constants.regex.NPM), p => {
-        const packageName = strings.chompLeft(p, constants.regex.KEY);
+        const packageName = strings.chompLeft(p.toLowerCase(), constants.regex.KEY);
         packages.getAnnotation(packageName).then(data => {
             app.sendMessage(spaceId, data);
             // const URL = strings.substitue(constants.urls.NPM, [packageName]);
