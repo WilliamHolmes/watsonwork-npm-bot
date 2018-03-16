@@ -16,8 +16,7 @@
     "bot",
     "app"
   ],
-  "author": "bhumitpatel@ie.ibm.com",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "devDependencies": {
     "concurrently": "^3.5.1",
     "nodemon": "^1.14.11",
