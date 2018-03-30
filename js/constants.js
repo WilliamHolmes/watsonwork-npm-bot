@@ -18,7 +18,7 @@ const constants = {
     PACKAGE_UNPUBLISHED: 'Package is Unpublished',
     regex: {
         KEY: 'npm@',
-        NPM: /\bnpm@[a-zA-Z-]*/gi
+        NPM: /\bnpm@[a-zA-Z0-9-]*/gi
     },
     urls: {
         LICENSE: 'http://spdx.org/licenses/{{0}}.html',
