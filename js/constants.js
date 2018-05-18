@@ -12,7 +12,7 @@ const constants = {
     HOME_PAGE: 'HomePage',
     ACTION_ID: `${ID}-npm-share|`,
     LICENSE: 'License',
-    LICENSES: ['BSD-3-Clause', 'MIT', 'ISC', 'Unlicense', 'W3C', 'WTFPL'],
+    LICENSES: ['Artistic-2.0', 'BSD-3-Clause', 'MIT', 'ISC', 'Unlicense', 'W3C', 'WTFPL'],
     PACKAGE_NOT_FOUND: 'Package Not Found',
     PACKAGE_SHARED: 'NPM Package - Shared With Space',
     PACKAGE_UNPUBLISHED: 'Package is Unpublished',
